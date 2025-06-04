@@ -1,0 +1,279 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+.filter-section {
+    font-size: large;
+    flex-basis: 300px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .filter-section {
+        height: auto;
+        flex-basis: auto;
+        padding: 20px
+    }
+}
+
+.pp {
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 300px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: center;
+    padding: 10px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    margin: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    display: block;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-price {
+    color: #E44D26;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-original-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 18px;
+}
+
+.pph {
+    position: relative;
+    left: 80px;
+    color: gray;
+    font-size:23px;
+    ;
+}
+
+.ppp {
+    position: relative;
+    left: 80px;  
+    color: black;
+    font-size: 30px;
+    font-family: Georgia, serif;
+
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: center;
+    padding: 10px;
+}
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    margin: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease; 
+}
+
+.product-card:hover {
+    border-color: #4CAF50; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    transform: scale(1.05); 
+}
+
+.product-image {
+    width: 100%;
+    display: block;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-price {
+    color: #E44D26;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-original-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 18px;
+}
+
+.product-discount-tag {
+    background-color: green;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.sec {
+    background-color:grey;
+}
+.add-to-cart-btn {
+    padding: 8px 16px;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; 
+    margin-top: 10px; 
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049; 
+}
+.bc {
+    background-color:grey;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color:lightsteelblue; 
+    margin: 15% auto;
+    padding: 20px;
+    border: none;
+    width: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+.close, .close-btn {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+.close:hover, .close:focus, .close-btn:hover {
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-content img {
+    width: 50%; 
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.modal-content h2 {
+    margin: 10px 0;
+    color: black;
+}
+
+
+.modal-content p {
+    margin: 20px 0;
+    color: black;
+    font-size: 18px;
+}
+
+
+.modal-content .modal-quantity {
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.modal-content input[type="number"] {
+    width: 70px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+
+.btn-add-to-cart, .close-btn {
+    padding: 10px 20px;
+    color: black;
+    margin: 10px 5px 0;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    width: 90%;
+    background: #4CAF50; 
+}
+
+.btn-add-to-cart:hover, .close-btn:hover {
+    background-color: #367C39; 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
